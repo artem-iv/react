@@ -23,9 +23,9 @@ const AdminPageGalleryList = ({ titleData }) => {
   return (
     <div className={classes.root}>
       <GridList cellHeight={160} className={classes.gridList} cols={3}>
-        {titleData.slice(0, 200).map(tile => (
+        {titleData.slice(0, 100).map(tile => (
           <GridListTile key={tile.img} cols={tile.cols || 1}>
-            <img src={tile.url} alt={tile.title} />
+            <img src={tile.previewURL} alt={tile.title} />
           </GridListTile>
         ))}
       </GridList>

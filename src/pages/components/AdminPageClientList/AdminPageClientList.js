@@ -6,22 +6,33 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
+import { withStyles } from "@material-ui/core";
 
 const AdminPageClientList = ({ rows }) => {
   console.log(rows);
+
+  const StyledTableCell = withStyles(theme => ({
+    head: {
+      backgroundColor: theme.palette.common.black,
+      color: theme.palette.common.white
+    },
+    body: {
+      fontSize: 14
+    }
+  }))(TableCell);
 
   return (
     <TableContainer component={Paper}>
       <Table aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Name</TableCell>
-            <TableCell align="right">Username</TableCell>
-            <TableCell align="right">Email</TableCell>
-            <TableCell align="right">Phone</TableCell>
-            <TableCell align="right">Website</TableCell>
-            <TableCell align="right">City</TableCell>
-            <TableCell align="right">Company</TableCell>
+            <StyledTableCell>Name</StyledTableCell>
+            <StyledTableCell align="right">Username</StyledTableCell>
+            <StyledTableCell align="right">Email</StyledTableCell>
+            <StyledTableCell align="right">Phone</StyledTableCell>
+            <StyledTableCell align="right">Website</StyledTableCell>
+            <StyledTableCell align="right">City</StyledTableCell>
+            <StyledTableCell align="right">Company</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>

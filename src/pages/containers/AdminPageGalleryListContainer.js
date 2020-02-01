@@ -13,10 +13,12 @@ class AdminPageGalleryListContainer extends React.Component {
     this.getPhotos();
   }
   getPhotos() {
-    fetch("https://jsonplaceholder.typicode.com/photos")
+    fetch(
+      "https://pixabay.com/api?key=15107253-82115474529a99a6181882ed0&color=black"
+    )
       .then(response => response.json())
       .then(data => {
-        this.setState({ titleData: data });
+        this.setState({ titleData: data.hits });
       });
   }
 
