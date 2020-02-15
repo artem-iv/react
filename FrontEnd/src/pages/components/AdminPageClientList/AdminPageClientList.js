@@ -45,8 +45,8 @@ const AdminPageClientList = ({ rows }) => {
               <TableCell align="right">{row.email}</TableCell>
               <TableCell align="right">{row.phone}</TableCell>
               <TableCell align="right">{row.website}</TableCell>
-              <TableCell align="right">{row.address.city}</TableCell>
-              <TableCell align="right">{row.company.name}</TableCell>
+              {/* <TableCell align="right">{row.address.city}</TableCell>
+              <TableCell align="right">{row.company.name}</TableCell> */}
             </TableRow>
           ))}
         </TableBody>

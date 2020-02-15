@@ -13,7 +13,7 @@ class AdminPageClientListContainer extends React.Component {
     this.getusers();
   }
   getusers() {
-    fetch("https://jsonplaceholder.typicode.com/users")
+    fetch("http://localhost:3000/users")
       .then(response => response.json())
       .then(data => {
         this.setState({ rows: data });
