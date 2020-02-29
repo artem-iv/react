@@ -1,11 +1,11 @@
 import React from "react";
 
-import AdminPageContainer from "./pages/containers/AdminPageContainer";
+import LoginContainer from "./pages/Login/containers/LoginLContainer";
 
 function App() {
   return (
     <div>
-      <AdminPageContainer />
+      <LoginContainer />
     </div>
   );
 }
